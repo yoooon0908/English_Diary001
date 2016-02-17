@@ -33,6 +33,36 @@ class SecondViewController: UIViewController {
     }
     
     
+    @IBAction func tapPhoto(sender: UIButton) {
+        
+        // フォトライブラリが使用可能か？
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            
+            // フォトライブラリの選択画面を表示
+            let picker = UIImagePickerController()
+           // picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(picker, animated: true, completion: nil)
+        }
+    }
+    
+    // 写真選択時に呼ばれる
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        // 選択した画像を取得
+        if info[UIImagePickerControllerOriginalImage] != nil {
+            if let photo: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                
+                // ImageViewにその画像を設定
+                secImageView.image = photo
+            }
+        }
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    
+    }
+    
+    
     @IBAction func tapSave(sender: UIButton) {
         
         //名前に代入して表示できるようにする

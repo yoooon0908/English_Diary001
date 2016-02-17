@@ -10,7 +10,9 @@ import UIKit
 
 class FourthViewController: UIViewController {
     
+    @IBOutlet weak var foTableView: UITableView!
     //気分をリストで表示できるようにする
+    //辞書＋辞書
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,22 +22,24 @@ class FourthViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        
-        //ファイルを読み込む
+        //json.txtファイルを読み込んで
         var path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
         var jsondata = NSData(contentsOfFile: path!)
         
-        //辞書データに変換
-        let jsonDictionary = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSDictionary
         
-        //データを表示する
-        //"関西":{"餅":"丸餅","醤油":"薄口","月見団子":"サトイモ型"}
-        for(key, data) in jsonDictionary {
-            var d1 = data["En"] as! String
-            var d2 = data["Ja"] as! String
-          
-            
+        let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSDictionary
+        
+      
+        for (key,data) in jsonDictionaray {
+            var d1 = data["餅"] as! String
+            var d2 = data["醤油"] as! String
+            var d3 = data["月見団子"] as! String
+            print("キー[\(key)] 餅\(d1)")
+            print("キー[\(key)] 醤油\(d2)")
+            print("キー[\(key)] 月見団子\(d3)")
         }
+        
+        
     }
     
 

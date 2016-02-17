@@ -152,10 +152,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="foTableView" destination="otL-9C-hOZ" id="G9g-1s-mC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMo-eC-EeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="-347"/>
+            <point key="canvasLocation" x="400" y="-347"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="WVN-a8-5WT">
@@ -239,6 +242,13 @@
                                 <connections>
                                     <action selector="tapSave:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="voT-ev-LYn"/>
                                     <segue destination="49e-Tb-3d3" kind="show" id="2hL-zM-QIN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3p-aQ-rI1">
+                                <rect key="frame" x="90" y="42" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapPhoto:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="5x4-9y-qOv"/>
                                 </connections>
                             </button>
                         </subviews>
