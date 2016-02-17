@@ -17,6 +17,27 @@ class FourthViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        //ファイルを読み込む
+        var path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
+        var jsondata = NSData(contentsOfFile: path!)
+        
+        //辞書データに変換
+        let jsonDictionary = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSDictionary
+        
+        //データを表示する
+        //"関西":{"餅":"丸餅","醤油":"薄口","月見団子":"サトイモ型"}
+        for(key, data) in jsonDictionary {
+            var d1 = data["En"] as! String
+            var d2 = data["Ja"] as! String
+          
+            
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
