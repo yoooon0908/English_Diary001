@@ -13,6 +13,10 @@
 		E9B2E61F1C7320CA00A091BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E61D1C7320CA00A091BD /* Main.storyboard */; };
 		E9B2E6211C7320CA00A091BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E6201C7320CA00A091BD /* Assets.xcassets */; };
 		E9B2E6241C7320CA00A091BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E6221C7320CA00A091BD /* LaunchScreen.storyboard */; };
+		E9B2E66B1C733DD300A091BD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E66A1C733DD300A091BD /* ThirdViewController.swift */; };
+		E9B2E66D1C73669300A091BD /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E66C1C73669300A091BD /* FourthViewController.swift */; };
+		E9B2E6711C7366DE00A091BD /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E6701C7366DE00A091BD /* FifthViewController.swift */; };
+		E9B2E6751C73ED4A00A091BD /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E6741C73ED4A00A091BD /* json.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E9B2E6201C7320CA00A091BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B2E6231C7320CA00A091BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9B2E6251C7320CA00A091BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B2E66A1C733DD300A091BD /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		E9B2E66C1C73669300A091BD /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		E9B2E6701C7366DE00A091BD /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		E9B2E6741C73ED4A00A091BD /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,14 @@
 				E9B2E6171C7320CA00A091BD /* AppDelegate.swift */,
 				E9B2E6191C7320CA00A091BD /* FirstViewController.swift */,
 				E9B2E61B1C7320CA00A091BD /* SecondViewController.swift */,
+				E9B2E66A1C733DD300A091BD /* ThirdViewController.swift */,
+				E9B2E66C1C73669300A091BD /* FourthViewController.swift */,
+				E9B2E6701C7366DE00A091BD /* FifthViewController.swift */,
 				E9B2E61D1C7320CA00A091BD /* Main.storyboard */,
 				E9B2E6201C7320CA00A091BD /* Assets.xcassets */,
 				E9B2E6221C7320CA00A091BD /* LaunchScreen.storyboard */,
 				E9B2E6251C7320CA00A091BD /* Info.plist */,
+				E9B2E6741C73ED4A00A091BD /* json.txt */,
 			);
 			path = EnglishDiary001;
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 				TargetAttributes = {
 					E9B2E6131C7320CA00A091BD = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = YRXYE8R7H9;
 					};
 				};
 			};
@@ -125,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B2E6751C73ED4A00A091BD /* json.txt in Resources */,
 				E9B2E6241C7320CA00A091BD /* LaunchScreen.storyboard in Resources */,
 				E9B2E6211C7320CA00A091BD /* Assets.xcassets in Resources */,
 				E9B2E61F1C7320CA00A091BD /* Main.storyboard in Resources */,
@@ -138,9 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B2E6711C7366DE00A091BD /* FifthViewController.swift in Sources */,
 				E9B2E61C1C7320CA00A091BD /* SecondViewController.swift in Sources */,
 				E9B2E6181C7320CA00A091BD /* AppDelegate.swift in Sources */,
+				E9B2E66B1C733DD300A091BD /* ThirdViewController.swift in Sources */,
 				E9B2E61A1C7320CA00A091BD /* FirstViewController.swift in Sources */,
+				E9B2E66D1C73669300A091BD /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -240,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -251,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EnglishDiary001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiary001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +282,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EnglishDiary001/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiary001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +311,7 @@
 				E9B2E62A1C7320CA00A091BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
