@@ -40,7 +40,7 @@ class SecondViewController: UIViewController {
             
             // フォトライブラリの選択画面を表示
             let picker = UIImagePickerController()
-           // picker.delegate = self
+            //picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             self.presentViewController(picker, animated: true, completion: nil)
         }
