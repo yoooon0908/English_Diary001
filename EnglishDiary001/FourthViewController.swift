@@ -10,9 +10,13 @@ import UIKit
 
 class FourthViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
+    
+    
     @IBOutlet weak var foTableView: UITableView!
     //気分をリストで表示できるようにする
     //辞書＋辞書
+    var englist:[NSDictionary] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +27,19 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
     
     //行数
     func tableView(tabeleView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return englist.count
     }
     
     //表示するセルの中身2
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell{
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "myCell")
         
-            cell.textLabel!.text = d1
+        
+        cell.textLabel!.text = "d1"
+
+
 //        cell.textLabel!.text = "\(indexPath.row)行目"
-//        cell.textLabel!.text = "\(tea_list[indexPath.row])"
+        cell.textLabel!.text = "\(englist[indexPath.row]["En"])"
 //        //文字を茶色にする
 //        cell.textLabel!.textColor = UIColor.brownColor()
 //        //チェックマークをつける
@@ -42,7 +49,6 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-
     
     
     override func viewWillAppear(animated: Bool) {
@@ -51,13 +57,16 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         var jsondata = NSData(contentsOfFile: path!)
         
         
-        let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSDictionary
+        let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
         
       
-        for (key,data) in jsonDictionaray {
-//            var d1 = data["En"] as! String
-//            var d2 = data["Ja"] as! String
-            var d1 = data
+        for data in jsonDictionaray {
+            var d1 = data["En"] as! String
+            var d2 = data["Ja"] as! String
+            //var d1 = data
+            
+            print(d1)
+            self.englist.append(data as! NSDictionary)
             
         }
         

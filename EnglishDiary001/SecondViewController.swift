@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     
     @IBOutlet weak var dataText001: UITextField!
@@ -40,7 +40,7 @@ class SecondViewController: UIViewController {
             
             // フォトライブラリの選択画面を表示
             let picker = UIImagePickerController()
-            //picker.delegate = self
+            picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             self.presentViewController(picker, animated: true, completion: nil)
         }
@@ -51,7 +51,7 @@ class SecondViewController: UIViewController {
         
         // 選択した画像を取得
         if info[UIImagePickerControllerOriginalImage] != nil {
-            if let photo: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            if let photo:UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 
                 // ImageViewにその画像を設定
                 secImageView.image = photo
@@ -61,6 +61,7 @@ class SecondViewController: UIViewController {
         picker.dismissViewControllerAnimated(true, completion: nil)
     
     }
+    
     
     
     @IBAction func tapSave(sender: UIButton) {
